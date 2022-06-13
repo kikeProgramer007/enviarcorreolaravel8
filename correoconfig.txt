@@ -5,7 +5,10 @@
 
 CONFIGURACION PARA ACTUALIZAR
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> c0a35e23be58614f71d023ae890761d2a293623b
 # cd /var/www
 # sudo chown -R $USER:root /var/www
 # rm -r html
