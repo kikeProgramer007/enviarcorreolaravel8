@@ -6,7 +6,7 @@
     <div class="card-header border-success text-center text-success"><b>Dejanos tu mensaje:</b></div>
     <div class="card-body"> 
 
-        <form action="{{route('contactaanos.store')}}" method="POST" class="needs-validation" novalidate>
+        <form action="{{route('contactanos.store')}}" method="POST" class="needs-validation" novalidate>
         @csrf
             <div class="mb-3">
               <label for="asunto" class="form-label fw-bold text-success">Asunto:</label>
@@ -65,11 +65,10 @@
 
             @if (Session::has('info'))
                 <div class="alert alert-success my-3 mb-2 alert-dismissible fade show" role="alert">
-                    <strong><i class="bi bi-envelope-check"></i> Enviado!</strong> {{Session::get('info')}}
+                    <strong><i class="fa-solid fa-envelope-circle-check"></i> Enviado!</strong> {{Session::get('info')}}
                     <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
                   </div>
             @endif
-
 
         </div><!--card-body-->
     </div><!--card-->

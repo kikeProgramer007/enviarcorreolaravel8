@@ -24,7 +24,7 @@ class ContactanosController extends Controller
         $correo = new ContactanosMailable($request->all());
         //CORREO AL QUE SE DESEA MANDAR EL MSM
         Mail::to('xthewonderlanx25996@gmail.com')->send($correo);
-        //Mail::to('administrador@corre.panaderia.com')->send($correo);
+        //Mail::to('administrador@correo.panaderia.com')->send($correo);
         return redirect()->route('contactanos.index')->with('info','Tu mensaje ha sido enviado correctamente.');//ENVIANDO CON UNA VARIABLE SESSION
     }
 

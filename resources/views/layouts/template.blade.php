@@ -6,12 +6,10 @@
     
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>@yield('titulo')</title>
-
     <!-- Bootstrap CSS -->
     <link href="{{ asset('css/bootstrap.min.css') }}" rel="stylesheet">
-
-    <!-- Bootstrap CSS iconos-->
-   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.1/font/bootstrap-icons.css">
+    <!-- Font oweson CSS iconos-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
 </head>
 
@@ -29,8 +27,7 @@
                 <footer>
                     <h5 class="fst-italic">Gracias por visitar mi página web. </h5>
                     <script src="{{ asset('js/bootstrap.bundle.min.js') }}"></script>
-                    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-
+                    {{-- <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script> --}}
                     <script>
                         document.getElementById("toastbtn").onclick = function() {
                           var toastElList = [].slice.call(document.querySelectorAll('.toast'))
@@ -39,7 +36,6 @@
                             return new bootstrap.Toast(toastEl) // No need for options; use the default options
                           });
                          toastList.forEach(toast => toast.show()); // This show them
-                     
                           console.log(toastList); // Testing to see if it works
                         };
                       </script>
@@ -47,6 +43,6 @@
            </div>
         </div>
     </div>
-
+  
 </body>
 </html>
