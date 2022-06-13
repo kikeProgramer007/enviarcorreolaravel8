@@ -6,13 +6,15 @@ use Illuminate\Bus\Queueable;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Mail\Mailable;
 use Illuminate\Queue\SerializesModels;
+use phpDocumentor\Reflection\Types\This;
 
 class ContactanosMailable extends Mailable
 {
     use Queueable, SerializesModels;
 
-    public $subject = "Asunto Urgente"; //VARIABLE PARA EL ASUNTO
+    // public $subject = "Asunto Urgente"; //VARIABLE PARA EL ASUNTO
     public $contacto;                   //mensaje
+    public $subject;
     /**
      * Create a new message instance.
      *
@@ -22,6 +24,7 @@ class ContactanosMailable extends Mailable
     {
         //RECIVIENDO PARAMETROS
         $this->contacto = $contacto;
+        $this->subject = $contacto['asunto'];
     }
 
     /**

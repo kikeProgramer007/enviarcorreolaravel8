@@ -7,8 +7,6 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>Correo electronico enviado</h1>
-    <p>Este es el primer correo que mande por laravel</p>
     <P><strong>Nombre: </strong>{{$contacto['name']}}</P>
     <P><strong>Correo: </strong>{{$contacto['correo']}}</P>
     <P><strong>Mensaje: </strong>{{$contacto['mensaje']}}</P>
