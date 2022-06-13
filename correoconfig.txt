@@ -5,12 +5,12 @@
 
 CONFIGURACION PARA ACTUALIZAR
 
-# sudo chown www-data:www-data /var/www/html/ -R
 # cd /var/www
 # sudo chown -R $USER:root /var/www
 # rm -r html
 # git clone https://github.com/kikeProgramer007/enviarcorreolaravel8.git
 # mv enviarcorreolaravel8 html
+# sudo chown www-data:www-data /var/www/html/ -R
 # cd /var/www/html
 # composer update
 # sudo mv server.php index.php
