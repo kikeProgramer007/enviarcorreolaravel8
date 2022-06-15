@@ -19,7 +19,7 @@
         <div class="row justify-content-md-center">
             <div class="col-md-8">
                 <header>
-                    <h1 class="text-center text-success">Contactanos</h1><br>
+                    <h1 class="text-center text-success">Enviar correo con Laravel</h1><br>
                 </header>
 
                  @yield('contenido')

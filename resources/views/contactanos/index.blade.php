@@ -3,7 +3,7 @@
 
 @section('contenido')
 <div class="card border-success mb-3">
-    <div class="card-header border-success text-center text-success"><b>Dejanos tu mensaje:</b></div>
+    <div class="card-header border-success text-center text-success"><b>FORMULARIO</b></div>
     <div class="card-body"> 
 
         <form action="{{route('contactanos.store')}}" method="POST" class="needs-validation" novalidate>
@@ -29,7 +29,7 @@
             @enderror
 
             <div class="mb-3">
-                <label for="correo" class="form-label fw-bold text-success">Correo:</label>
+                <label for="correo" class="form-label fw-bold text-success">Correo remitente:</label>
                 <input class="form-control" type="email" name="correo"id="correo" placeholder="Ingrese su correo" required>
                 <div class="invalid-feedback">
                     Porfavor ingrese su correo.
@@ -37,6 +37,18 @@
             </div>
 
             @error('correo')
+                <p><strong>{{$message}}</strong></p>
+            @enderror
+
+          <div class="mb-3">
+              <label for="correodestino" class="form-label fw-bold text-success">Correo destinatario:</label>
+              <input class="form-control" type="email" name="correodestino"id="correodestino" placeholder="Ingrese su correo" required>
+              <div class="invalid-feedback">
+                  Porfavor ingrese el correo destino.
+               </div>
+          </div>
+
+            @error('correodestino')
                 <p><strong>{{$message}}</strong></p>
             @enderror
 
@@ -57,12 +69,6 @@
               </div>
         </form>
 
-            {{-- @if (session('info'))
-                <script type="text/javascript">
-                    // alert("{{session('info')}}");
-                </script>
-            @endif --}}
-
             @if (Session::has('info'))
                 <div class="alert alert-success my-3 mb-2 alert-dismissible fade show" role="alert">
                     <strong><i class="fa-solid fa-envelope-circle-check"></i> Enviado!</strong> {{Session::get('info')}}
@@ -72,21 +78,6 @@
 
         </div><!--card-body-->
     </div><!--card-->
-
-   {{-- <button type="button" class="btn btn-primary" id="toastbtn">Show live toast</button>
-
-   <div class="position-fixed bottom-0 end-0 p-3" style="z-index: 11">
-     <div id="toast" class="toast hide" data-autohide="false" role="alert" aria-live="assertive" aria-atomic="true">
-       <div class="toast-header">
-         <strong class="me-auto"> <i class="bi bi-envelope-check"></i> Mensaje enviado</strong>
-         <small>11 mins ago</small>
-         <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
-       </div>
-       <div class="toast-body">
-         Tu mensaje ha sido enviado correctamente.
-       </div>
-     </div>
-   </div> --}}
 
 <script>
 
@@ -108,7 +99,6 @@
       }, false)
     })
 })()
-
 
 </script>
 @endsection

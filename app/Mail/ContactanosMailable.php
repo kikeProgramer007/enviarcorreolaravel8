@@ -15,6 +15,7 @@ class ContactanosMailable extends Mailable
     // public $subject = "Asunto Urgente"; //VARIABLE PARA EL ASUNTO
     public $contacto;                   //mensaje
     public $subject;
+    public $from;
     /**
      * Create a new message instance.
      *
@@ -23,10 +24,10 @@ class ContactanosMailable extends Mailable
     public function __construct($contacto)
     {
         //RECIVIENDO PARAMETROS
+        $this->from($contacto['correo']);
         $this->contacto = $contacto;
         $this->subject = $contacto['asunto'];
     }
-
     /**
      * Build the message.
      *
